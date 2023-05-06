@@ -18,28 +18,3 @@ fs.rmdir(pathToFileCopy, {recursive: true}, () => {
     });
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// files.forEach(file => {
-         
-//    const filePath = path.join(__dirname, 'files', file)
-//    const copyFilePath = path.join(__dirname, 'files-copy', file)
-//    const copyFileContent = fs.copyFile(filePath, copyFilePath, err => {
-//       if(err) throw err
-//    })
-// })
