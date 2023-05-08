@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('node:path');
 const process = require('node:process');
 const { stdin, stdout} = process;
-const pathToText = path.join('./', '02-write-file/', 'text.txt');
+const pathToText = path.join(__dirname, 'text.txt');
 
 fs.writeFile(pathToText, '', function(error) {
   if(error) throw error;
