@@ -13,7 +13,7 @@ fs.readdir(pathToFolder, {withFileTypes: true}, (err, files) => {
       const removePeriodFromExtension =  extensionInFile.replace('.', '');
       const removeExtensionFromFileName = file.name.replace(extensionInFile, '');
       fs.stat(newPathToFiles, function(err, stats) {
-        const moveSizeToKb = stats.size / 1000;
+        const moveSizeToKb = stats.size / 1024;
         stdout.write(`${removeExtensionFromFileName} - ${removePeriodFromExtension} - ${moveSizeToKb}kb\n`);
       });
     }
