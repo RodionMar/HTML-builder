@@ -4,7 +4,7 @@ const path = require('node:path');
 const pathToFileCopy = path.join(__dirname, 'files-copy');
 const pathToOriginalFile = path.join(__dirname, 'files');
 
-fs.rmdir(pathToFileCopy, {recursive: true}, () => {
+fs.rm(pathToFileCopy, {recursive: true}, () => {
   fs.mkdir(pathToFileCopy, {recursive: true}, (err) => {
     if(err) throw err;
     fs.readdir(pathToOriginalFile, (err, files) => {
